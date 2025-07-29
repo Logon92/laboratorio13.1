@@ -31,3 +31,10 @@
     color: #22C6CB;
     font-size: 2rem;
 }
+
+.accountInfo {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}

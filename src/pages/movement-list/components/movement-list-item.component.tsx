@@ -26,7 +26,11 @@ export const MovementListItemComponent: React.FC<Props> = (props) => {
             <span className={classes.dataCell}>{formatDateDMY(movementItem.transaction)}</span>
             <span className={classes.dataCell}>{formatDateDMY(movementItem.realTransaction)}</span>
             <span className={classes.dataCell}>{movementItem.description}</span>
-            <span className={`${classes.dataCell} ${classes.alignRight}`}>
+            <span className={`
+                ${classes.dataCell} 
+                ${classes.alignRight}
+                ${movementItem.amount < 0 ? classes.negative : ""}
+            `}>
                 {`${movementItem.amount} €`}
             </span>
             <span className={`${classes.dataCell} ${classes.alignRight}`}>
